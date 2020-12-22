@@ -22,11 +22,18 @@ class FeedbackController extends Controller
         return redirect('/about');
     }
 
+    public function Dashboardindex()
+    {
+        $feedbacks = Feedbacks::all();
+
+        return view('admin.admin', compact('feedbacks'));
+    }
+
     public function index()
     {
         $feedbacks = Feedbacks::all();
 
-        return view('admin', compact('feedbacks'));
+        return view('admin.feedback', compact('feedbacks'));
     }
 
     public function destroy($id)
@@ -35,14 +42,14 @@ class FeedbackController extends Controller
 
         Alert::success('Berhasil delete Feedback');
 
-        return redirect('/admin');
+        return redirect('/admin.admin');
     }
 
     public function edit($id)
     {
         $feedback = Feedbacks::find($id);
 
-        return view('edit-feedback', compact('feedback'));
+        return view('admin.edit-feedback', compact('feedback'));
     }
 
     public function update($id, Request $req)

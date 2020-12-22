@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <button class="btn btn-color btn-block text-light" type="submit">Berlangganan</button>
+                <a class="btn btn-color btn-block text-light" href="/register">Berlangganan</a>
             </div>
         </div>
         </div>

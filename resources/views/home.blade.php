@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-sm-6 mt-5">
                     <h1><b>Ayo Ngambis Bersama !</b></h1>
-                    <button type="button" class="btn btn-color btn-lg mt-3 text-light">Info Lebih Lanjut</button>
+                    <a href="/course" class="btn btn-color btn-lg mt-3 text-light">Info Lebih Lanjut</a>
                 </div>
                 <div class="col-sm-6">
                     <img src="img/home.png" width="540px" height="280px">

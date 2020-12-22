@@ -15,8 +15,8 @@
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header">
-                Edit Feedback
+            <div class="card-header text-primary">
+                <b>Edit Feedback</b>
             </div>
             <div class="card-body">
                 <form method="POST" action="/update/{{$feedback->id}}">

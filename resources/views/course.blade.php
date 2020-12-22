@@ -15,7 +15,7 @@
                     <li class="list-group-item">Kuis dan Laporan harian</li>
                 </ul>
                 <div class="card-body">
-                    <a href="/login" class="btn btn-lg btn-block text-light" style="background-color:#D1CB6D ;">Daftar</a>
+                    <a href="/register" class="btn btn-lg btn-block text-light" style="background-color:#D1CB6D ;">Daftar</a>
                 </div>
             </div>
         </center>

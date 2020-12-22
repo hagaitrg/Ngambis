@@ -57,9 +57,9 @@
                                 </label>
                             </div>
                         </center>
-                        <form class="ml-5 mb-5 mt-5" action="" method="post">
-                            @yield('auth')
-                        </form>
+
+                        @yield('content')
+
                         <div class="d-flex justify-content-end">
                             <small class="text-muted">&copy; Ngambis 2020</small>
                         </div>
