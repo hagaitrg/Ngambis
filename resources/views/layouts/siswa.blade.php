@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Guru</div>
+                <div class="sidebar-brand-text mx-3">Siswa</div>
             </a>
 
             <!-- Divider -->
@@ -52,21 +52,24 @@
             <hr class="sidebar-divider">
 
             <div class="sidebar-heading">
-                Make Something New
+                Learn Something New
             </div>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Kelas</span>
+                    <span>Materi</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Kelas Components:</h6>
-                        <a class="collapse-item" href="/guru-materi">Materi</a>
-                        <a class="collapse-item" href="/guru-quiz">Quiz</a>
-                        <a class="collapse-item" href="/guru-penilaian">Penilaian</a>
+                        <h6 class="collapse-header">Materi Components:</h6>
+                        <a class="collapse-item" href="#">Matematika Dasar</a>
+                        <a class="collapse-item" href="#">Fisika Dasar</a>
+                        <a class="collapse-item" href="#">Kimia Dasar</a>
+                        <a class="collapse-item" href="#">Geografi</a>
+                        <a class="collapse-item" href="#">Sejarah</a>
+                        <a class="collapse-item" href="#">Matematika Ekonomi</a>
                     </div>
                 </div>
             </li>
@@ -74,19 +77,23 @@
             <hr class="sidebar-divider">
 
             <div class="sidebar-heading">
-                Tables
+                Asah Skillmu
             </div>
             <!-- Nav Item - User -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa fa-table"></i>
-                    <span>Tables</span>
+                    <i class="fas fa-comment"></i>
+                    <span>Quiz</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tables Component:</h6>
-                        <a class="collapse-item" href="/guru-quiz-tables">Quiz</a>
-                        <a class="collapse-item" href="/guru-nilai-tables">Nilai</a>
+                        <h6 class="collapse-header">Quiz Component:</h6>
+                        <a class="collapse-item" href="#">Matematika Dasar</a>
+                        <a class="collapse-item" href="#">Fisika Dasar</a>
+                        <a class="collapse-item" href="#">Kimia Dasar</a>
+                        <a class="collapse-item" href="#">Geografi</a>
+                        <a class="collapse-item" href="#">Sejarah</a>
+                        <a class="collapse-item" href="#">Matematika Ekonomi</a>
                     </div>
                 </div>
             </li>
@@ -156,7 +163,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Guru</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Siswa</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->

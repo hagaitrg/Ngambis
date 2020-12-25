@@ -91,6 +91,23 @@ Route::get('/guru-quiz', function () {
     return view('guru.quiz');
 });
 
+Route::get('/guru-penilaian', function () {
+    return view('guru.penilaian');
+});
+
+Route::get('/guru-quiz-tables', function () {
+    return view('guru.quiz-tables');
+});
+
+Route::get('/guru-nilai-tables', function () {
+    return view('guru.nilai-tables');
+});
+
+// Routes Siswa
+Route::get('/siswa', function () {
+    return view('siswa.dashboard-siswa');
+});
+
 
 // Auth::routes();
 
