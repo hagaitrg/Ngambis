@@ -18,39 +18,20 @@
             <!-- Card Body -->
             <div class="card-body">
                 <div class="container">
-                    <form method="" action="">
+                    <form method="POST" action="create_quiz">
                         @csrf
+                        @method('POST')
                         <div class="form-group">
-                            <label for="title">Judul Quiz</label>
-                            <input type="text" class="form-control" name="title">
+                            <label for="soal">Soal Quiz</label>
+                            <textarea type="text" class="form-control" rows="3" name="soal"> </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">No Soal</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="authot">Soal Quiz</label>
-                            <textarea type="text" class="form-control" rows="3" name="author"> </textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Mata Pelajaran</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="1">Matematika Dasar</option>
-                                <option value="2">Fisika Dasar</option>
-                                <option value="3">Kimia Dasar</option>
-                                <option value="4">Bahasa Indonesia</option>
-                                <option value="5">Bahasa Inggris</option>
-                                <option value="6">Matematika Soshum</option>
-                                <option value="7">Ekonomi</option>
-                                <option value="8">Geografi</option>
-                                <option value="9">Sejarah</option>
-                                <option value="10">Sosiologi</option>
+                            <label for="materi">Materi</label>
+                            <select class="form-control" name="materi">
+                                <option value="-">Pilih Materi</option>
+                                @foreach ($titles as $index => $title)
+                                <option value="{{$title->id}}">{{$title->title}} - {{$title->belongsToMatpel->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block mb-5">Submit</button>

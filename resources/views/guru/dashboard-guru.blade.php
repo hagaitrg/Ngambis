@@ -68,14 +68,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($mmateris as $index => $materi)
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>{{$index+1}}</th>
+                            <th>{{$materi->title}}</th>
+                            <th>{{$materi->author}}</th>
+                            <th>{{$materi->meet}}</th>
+                            <th>{{$materi->desc}}</th>
+                            <th>{{$materi->belongsToMatpel->name}}</th>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

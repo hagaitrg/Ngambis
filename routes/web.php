@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,10 @@ Route::get('/course', function () {
 
 Route::get('/about', function () {
     return view('about');
+});
+
+Route::get('/jurusan', function () {
+    return view('jurusan');
 });
 
 
@@ -79,17 +85,14 @@ Route::get('/users', function () {
 });
 
 // Guru Routes 
-Route::get('/guru', function () {
-    return view('guru.dashboard-guru');
-});
+Route::get('/guru', [MateriController::class, 'index']);
 
 Route::get('/guru-materi', function () {
     return view('guru.materi');
 });
 
-Route::get('/guru-quiz', function () {
-    return view('guru.quiz');
-});
+Route::get('/guru-quiz', [MateriController::class, 'title'])->name("quiz.title");
+Route::post('/create_quiz', [QuizController::class, 'insert']);
 
 Route::get('/guru-penilaian', function () {
     return view('guru.penilaian');
@@ -103,10 +106,17 @@ Route::get('/guru-nilai-tables', function () {
     return view('guru.nilai-tables');
 });
 
+Route::post('/create-materi', [MateriController::class, 'insert'])->name("materi.insert");
+
 // Routes Siswa
 Route::get('/siswa', function () {
     return view('siswa.dashboard-siswa');
 });
+
+Route::get('/siswa-quiz', function () {
+    return view('siswa.quiz-siswa');
+});
+
 
 
 // Auth::routes();
