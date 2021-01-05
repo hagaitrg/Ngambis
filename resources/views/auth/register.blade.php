@@ -43,6 +43,7 @@
     <div class="form-group">
         <input id="password-confirm" type="password" class="form-control col-sm-10" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
     </div>
+    <p>Sudah punya akun?<a href="/login">Login</a></p>
     <button type="submit" class="btn text-light btn-block col-sm-10 rounded-pill" name="register" style="background-color: #D1CB6D;">Sign Up</button>
 </form>
 @endsection

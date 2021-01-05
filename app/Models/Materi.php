@@ -20,6 +20,6 @@ class Materi extends Model
 
     public function hasManyQuiz()
     {
-        return $this->hasMany(Quiz::class);
+        return $this->hasMany(Quiz::class, "materi_id");
     }
 }

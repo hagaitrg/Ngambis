@@ -15,14 +15,46 @@ class MatpelSeeder extends Seeder
     public function run()
     {
         DB::table('tabel_matpel')->insert([
-            ['name' => 'Matematika Dasar'],
-            ['name' => 'Fisika Dasar'],
-            ['name' => 'Kimia Dasar'],
-            ['name' => 'Matematika Soshum'],
-            ['name' => 'Ekonomi'],
-            ['name' => 'Geografi'],
-            ['name' => 'Sejarah'],
-            ['name' => 'Sosoiologi'],
+            [
+                'name' => 'Matematika Dasar',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Fisika Dasar',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Kimia Dasar',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Matematika Soshum',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Ekonomi',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Geografi',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Sejarah',
+                'desc' => '',
+                'image' => ''
+            ],
+            [
+                'name' => 'Sosoiologi',
+                'desc' => '',
+                'image' => ''
+            ],
         ]);
     }
 }

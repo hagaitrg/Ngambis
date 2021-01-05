@@ -8,17 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Siswa Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -31,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/guru">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/siswa">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -64,12 +65,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Materi Components:</h6>
-                        <a class="collapse-item" href="#">Matematika Dasar</a>
-                        <a class="collapse-item" href="#">Fisika Dasar</a>
-                        <a class="collapse-item" href="#">Kimia Dasar</a>
-                        <a class="collapse-item" href="#">Geografi</a>
-                        <a class="collapse-item" href="#">Sejarah</a>
-                        <a class="collapse-item" href="#">Matematika Ekonomi</a>
+                        @yield('materi-components')
                     </div>
                 </div>
             </li>
@@ -88,12 +84,14 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Quiz Component:</h6>
-                        <a class="collapse-item" href="#">Matematika Dasar</a>
-                        <a class="collapse-item" href="#">Fisika Dasar</a>
-                        <a class="collapse-item" href="#">Kimia Dasar</a>
-                        <a class="collapse-item" href="#">Geografi</a>
-                        <a class="collapse-item" href="#">Sejarah</a>
-                        <a class="collapse-item" href="#">Matematika Ekonomi</a>
+                        <a class="collapse-item" href="/quiz/1">Matematika Dasar</a>
+                        <a class="collapse-item" href="/quiz/2">Fisika Dasar</a>
+                        <a class="collapse-item" href="/quiz/3">Kimia Dasar</a>
+                        <a class="collapse-item" href="/quiz/4">Matematika Soshum</a>
+                        <a class="collapse-item" href="/quiz/5">Ekonomi</a>
+                        <a class="collapse-item" href="/quiz/6">Geografi</a>
+                        <a class="collapse-item" href="/quiz/7">Sejarah</a>
+                        <a class="collapse-item" href="/quiz/8">Sosiologi</a>
                     </div>
                 </div>
             </li>
@@ -173,10 +171,14 @@
                                     Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
 
@@ -261,6 +263,7 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+    @yield('script')
 </body>
 
 </html>

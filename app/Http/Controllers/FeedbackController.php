@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Feedbacks;
 use Illuminate\Http\Request;
 use Ankurk91\LaravelAlert\Facades\Alert;
+use App\Models\Materi;
+use App\Models\Matpel;
+use App\Models\User;
 
 class FeedbackController extends Controller
 {
@@ -26,7 +29,14 @@ class FeedbackController extends Controller
     {
         $feedbacks = Feedbacks::all();
 
-        return view('admin.admin', compact('feedbacks'));
+        $countFeedback = Feedbacks::count();
+
+        $countMatpel = Matpel::count();
+
+        $users = User::all();
+        $matpels = Matpel::all();
+
+        return view('admin.admin', compact('feedbacks', 'countFeedback', 'countMatpel', 'users', 'matpels'));
     }
 
     public function index()

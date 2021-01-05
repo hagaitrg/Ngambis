@@ -44,7 +44,12 @@
                 </div>
             </div>
             <div class="col-sm-3">
+                @guest
                 <a class="btn btn-color btn-block text-light" href="/register">Berlangganan</a>
+                @else
+                <a class="btn btn-color btn-block text-light" href="{{Auth::user()->role->role == 'siswa' ? '/siswa': (Auth::user()->role->role == 'guru' ? '/guru':'/admin')}}">Dashboard</a>
+
+                @endguest
             </div>
         </div>
         </div>

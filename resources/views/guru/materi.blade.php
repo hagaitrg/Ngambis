@@ -66,10 +66,6 @@
                                 <option value="8">Sosiologi</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="video">Video Penjelasan</label>
-                            <input type="file" class="form-control" name="video" required>
-                        </div>
                         <button type="submit" class="btn btn-primary btn-block mb-5">Submit</button>
                     </form>
                 </div>
